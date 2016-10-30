@@ -2,6 +2,9 @@ Centercob
 =========
 
 [![Build Status](https://travis-ci.org/mrprompt/Centercob.svg?branch=master)](https://travis-ci.org/mrprompt/Centercob)
+[![Code Climate](https://codeclimate.com/github/mrprompt/Centercob/badges/gpa.svg)](https://codeclimate.com/github/mrprompt/Centercob)
+[![Test Coverage](https://codeclimate.com/github/mrprompt/Centercob/badges/coverage.svg)](https://codeclimate.com/github/mrprompt/Centercob/coverage)
+[![Issue Count](https://codeclimate.com/github/mrprompt/Centercob/badges/issue_count.svg)](https://codeclimate.com/github/mrprompt/Centercob)
 
 Biblioteca de integração com a Centercob por meio de troca de arquivos de remessa.
 
