@@ -18,17 +18,33 @@ Descrição dos exemplos
     - samples/remessa.php       - Geração de arquivo de remessa
     - samples/processado.php    - Leitura do arquivo de remessa processado
     - samples/recebido.php      - Leitura do arquivo de retorno
+    
+## Instalação via Composer
 
-## Instalação
+```
+composer.phar require mrprompt/centercob
+```
+
+## Contribuindo
+
+### Instalação
+
 Após baixar o [Composer](http://www.getcomposer.org), basta rodar o *install*
 
 ```
 composer.phar install --prefer-dist
 ```
 
-## Rodar Exemplos
+### Rodar Exemplos
 Após a instalação, você pode rodar os exemplos utilizando o servidor embutido do PHP
 
 ```
 composer.phar run
 ```
+
+### Testes
+
+```
+./vendor/bin/phpunit
+```
+
