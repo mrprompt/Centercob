@@ -1,6 +1,8 @@
 Centercob
 =========
 
+[![Build Status](https://travis-ci.org/mrprompt/Centercob.svg?branch=master)](https://travis-ci.org/mrprompt/Centercob)
+
 Biblioteca de integração com a Centercob por meio de troca de arquivos de remessa.
 
 A integração possui suporte a:
