@@ -20,6 +20,11 @@
         "name"  : "Thiago Paes",
         "email" : "mrprompt@gmail.com",
         "role"  : "Developer"
+      },
+      {
+        "name"  : "Johnathan Cardoso",
+        "email" : "git@spamhunter.johnathan.com.br",
+        "role"  : "Collaborator"
       }
   ],
   "require": {
