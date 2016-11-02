@@ -45,7 +45,7 @@ class FileTest extends PHPUnit_Framework_TestCase
             $this->customerMock(),
             $this->sequenceMock(),
             new DateTime,
-            __DIR__ . '/resources'
+            __DIR__
         );
     }
 
@@ -169,6 +169,7 @@ class FileTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @depends save
      * @covers \MrPrompt\Centercob\Gateway\Shipment\File::__construct()
      * @covers \MrPrompt\Centercob\Gateway\Shipment\File::read()
      */
@@ -180,5 +181,8 @@ class FileTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf(Header::class, $result[0]);
         $this->assertInstanceOf(Cart::class, $result[1]);
         $this->assertInstanceOf(Footer::class, $result[2]);
+
+        // cleanup temp files
+        array_map('unlink', glob(__DIR__ . DIRECTORY_SEPARATOR . '*.TXT'));
     }
 }

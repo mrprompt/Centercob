@@ -13,8 +13,13 @@ A integração possui suporte a:
 - Cartão de crédito
 - Débito em Conta
 - Conta de Energia
+
+## Dependências
+
+- PHP 5.6
    
 ## Exemplos
+
 Os exemplos estão na pasta *samples*.
 
 Descrição dos exemplos
@@ -29,27 +34,3 @@ Descrição dos exemplos
 ```
 composer.phar require mrprompt/centercob
 ```
-
-## Contribuindo
-
-### Instalação
-
-Após baixar o [Composer](http://www.getcomposer.org), basta rodar o *install*
-
-```
-composer.phar install --prefer-dist
-```
-
-### Rodar Exemplos
-Após a instalação, você pode rodar os exemplos utilizando o servidor embutido do PHP
-
-```
-composer.phar run
-```
-
-### Testes
-
-```
-./vendor/bin/phpunit
-```
-
