@@ -11,6 +11,7 @@ use MrPrompt\Centercob\Tests\Gateway\Mock;
 use MrPrompt\Centercob\Gateway\Shipment\Partial\Footer;
 use MrPrompt\Centercob\Gateway\Shipment\Partial\Header;
 use MrPrompt\Centercob\Common\Base\Sequence;
+use org\bovigo\vfs\vfsStream;
 
 /**
  * file test case.
@@ -20,12 +21,12 @@ use MrPrompt\Centercob\Common\Base\Sequence;
 class FileTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * @see \Centercob\Common\Util\ChangeProtectedAttribute
+     * @see \MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute
      */
     use ChangeProtectedAttribute;
 
     /**
-     * @see \Centercob\Tests\Gateway\Mock
+     * @see \MrPrompt\Centercob\Tests\Gateway\Mock
      */
     use Mock;
 
@@ -33,6 +34,21 @@ class FileTest extends PHPUnit_Framework_TestCase
      * @var File
      */
     private $file;
+
+    /**
+     * @var \org\bovigo\vfs\vfsStreamDirectory
+     */
+    private static $root;
+
+    /**
+     * Boostrap
+     */
+    public static function setUpBeforeClass()
+    {
+        parent::setUpBeforeClass();
+
+        self::$root = vfsStream::setup();
+    }
 
     /**
      * Prepares the environment before running a test.
@@ -45,7 +61,7 @@ class FileTest extends PHPUnit_Framework_TestCase
             $this->customerMock(),
             $this->sequenceMock(),
             new DateTime,
-            __DIR__
+            self::$root->url()
         );
     }
 
@@ -181,8 +197,5 @@ class FileTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf(Header::class, $result[0]);
         $this->assertInstanceOf(Cart::class, $result[1]);
         $this->assertInstanceOf(Footer::class, $result[2]);
-
-        // cleanup temp files
-        array_map('unlink', glob(__DIR__ . DIRECTORY_SEPARATOR . '*.TXT'));
     }
 }

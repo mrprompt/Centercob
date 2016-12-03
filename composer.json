@@ -3,7 +3,7 @@
   "description" : "Centercob payment integration",
   "license" : "MIT",
   "type": "library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimum-stability": "stable",
   "autoload" : {
     "psr-4" : {
@@ -34,6 +34,7 @@
   "require-dev": {
     "phpunit/phpunit": "^4.4.5",
     "mockery/mockery": "dev-master@dev",
+    "mikey179/vfsStream": "^1.6",
     "codeclimate/php-test-reporter": "dev-master"
   }
 }
