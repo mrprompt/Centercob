@@ -1,7 +1,7 @@
 <?php
 namespace MrPrompt\Centercob\Tests\Gateway\Received\Partial;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use MrPrompt\Centercob\Gateway\Received\Partial\Footer;
 use MrPrompt\Centercob\Common\Base\Sequence;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
@@ -12,7 +12,7 @@ use MrPrompt\Centercob\Tests\Gateway\Mock;
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class FooterTest extends PHPUnit_Framework_TestCase
+class FooterTest extends TestCase
 {
     /**
      * @see \Centercob\Common\Util\ChangeProtectedAttribute

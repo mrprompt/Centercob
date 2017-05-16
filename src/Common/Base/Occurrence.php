@@ -117,7 +117,7 @@ class Occurrence
     public function setDescription($description = '')
     {
         try {
-            Validator::string()->assert($description);
+            Validator::stringType()->assert($description);
 
             $this->description = $description;
         } catch (AllOfException $ex) {

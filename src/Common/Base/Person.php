@@ -241,7 +241,7 @@ class Person
     public function setPerson($person)
     {
         try {
-            Validator::create()->string()->in(['F', 'J'])->assert($person);
+            Validator::create()->stringType()->in(['F', 'J'])->assert($person);
 
             $this->person = $person;
         } catch (AllOfException $ex) {

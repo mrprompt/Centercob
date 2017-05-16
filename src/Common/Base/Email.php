@@ -77,7 +77,7 @@ class Email
     {
         try {
 
-            Validator::notEmpty()->bool()->assert($primary);
+            Validator::notEmpty()->boolType()->assert($primary);
 
             $this->primary = $primary;
         } catch (AllOfException $ex) {

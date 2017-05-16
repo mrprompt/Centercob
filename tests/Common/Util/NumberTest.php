@@ -1,7 +1,7 @@
 <?php
 namespace MrPrompt\Centercob\Tests\Common\Util;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use MrPrompt\Centercob\Common\Util\Number;
 
 /**
@@ -9,7 +9,7 @@ use MrPrompt\Centercob\Common\Util\Number;
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class NumberTest extends PHPUnit_Framework_TestCase
+class NumberTest extends TestCase
 {
     /**
      * @test

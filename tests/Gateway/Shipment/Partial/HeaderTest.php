@@ -3,7 +3,7 @@ namespace MrPrompt\Centercob\Tests\Gateway\Shipment\Partial;
 
 use DateTime;
 use Mockery as m;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use MrPrompt\Centercob\Gateway\Shipment\Partial\Header;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 use MrPrompt\Centercob\Tests\Gateway\Mock as CentercobMock;
@@ -15,7 +15,7 @@ use MrPrompt\Centercob\Common\Base\Sequence;
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class HeaderTest extends PHPUnit_Framework_TestCase
+class HeaderTest extends TestCase
 {
     /**
      * @see \Centercob\Common\Util\ChangeProtectedAttribute

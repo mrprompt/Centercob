@@ -34,7 +34,7 @@ class Holder extends Person
             Validator
                 ::create()
                 ->notEmpty()
-                ->int()
+                ->intType()
                 ->assert($code);
 
             $this->code = $code;

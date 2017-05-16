@@ -4,14 +4,14 @@ namespace MrPrompt\Centercob\Tests\Common\Base;
 use MrPrompt\Centercob\Common\Base\ConsumerUnity;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 use Mockery as m;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Consumer Unity test case.
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class ConsumerUnityTest extends PHPUnit_Framework_TestCase
+class ConsumerUnityTest extends TestCase
 {
     /**
      * @see \Centercob\Tests\ChangeProctedAttribute

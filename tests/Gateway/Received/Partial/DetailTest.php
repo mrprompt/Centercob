@@ -1,7 +1,7 @@
 <?php
 namespace MrPrompt\Centercob\Tests\Gateway\Received\Partial;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use MrPrompt\Centercob\Gateway\Received\Partial\Detail;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 use MrPrompt\Centercob\Tests\Gateway\Mock;
@@ -19,7 +19,7 @@ use MrPrompt\Centercob\Common\Base\Sequence;
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class DetailTest extends PHPUnit_Framework_TestCase
+class DetailTest extends TestCase
 {
     /**
      * @see \Centercob\Common\Util\ChangeProtectedAttribute

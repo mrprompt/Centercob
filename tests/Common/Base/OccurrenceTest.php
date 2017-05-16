@@ -3,14 +3,14 @@ namespace MrPrompt\Centercob\Tests\Common\Base;
 
 use MrPrompt\Centercob\Common\Base\Occurrence;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Document test case.
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class OccurrenceTest extends PHPUnit_Framework_TestCase
+class OccurrenceTest extends TestCase
 {
     /**
      * @see \Centercob\Tests\ChangeProctedAttribute
@@ -138,10 +138,11 @@ class OccurrenceTest extends PHPUnit_Framework_TestCase
     /**
      * @test
      * @covers \MrPrompt\Centercob\Common\Base\Occurrence::setReturn()
+     * @expectedException \InvalidArgumentException
      */
-    public function setReturnReturnNullWhenReceiveEmptyValue()
+    public function setReturnThrowsExceptionWhenReceiveEmptyValue()
     {
-        $this->assertNull($this->occurrence->setReturn(''));
+        $this->occurrence->setReturn('');
     }
 
     /**

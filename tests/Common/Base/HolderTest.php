@@ -2,7 +2,7 @@
 namespace MrPrompt\Centercob\Tests\Common\Base;
 
 use Mockery as m;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use MrPrompt\Centercob\Common\Base\Holder;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 
@@ -11,7 +11,7 @@ use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class HolderTest extends PHPUnit_Framework_TestCase
+class HolderTest extends TestCase
 {
     /**
      * @see \Centercob\Common\Util\ChangeProtectedAttribute

@@ -4,7 +4,7 @@ namespace MrPrompt\Centercob\Tests\Gateway\Shipment;
 use MrPrompt\Centercob\Common\Base\Cart;
 use DateTime;
 use Mockery as m;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use MrPrompt\Centercob\Gateway\Shipment\File;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 use MrPrompt\Centercob\Tests\Gateway\Mock;
@@ -18,7 +18,7 @@ use org\bovigo\vfs\vfsStream;
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class FileTest extends PHPUnit_Framework_TestCase
+class FileTest extends TestCase
 {
     /**
      * @see \MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute

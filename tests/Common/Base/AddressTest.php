@@ -3,14 +3,14 @@ namespace MrPrompt\Centercob\Tests\Common\Base;
 
 use MrPrompt\Centercob\Common\Base\Address;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Address test case.
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class AddressTest extends PHPUnit_Framework_TestCase
+class AddressTest extends TestCase
 {
     use ChangeProtectedAttribute;
 

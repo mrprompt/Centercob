@@ -54,7 +54,7 @@ class Phone
     public function setNumber($number)
     {
         try {
-            Validator::string()->notEmpty()->length(8, 20)->assert($number);
+            Validator::stringType()->notEmpty()->length(8, 20)->assert($number);
 
             $this->number = $number;
         } catch (AllOfException $ex) {
@@ -76,7 +76,7 @@ class Phone
     public function setType($type)
     {
         try {
-            Validator::int()->in([self::CELLPHONE, self::TELEPHONE])->assert($type);
+            Validator::intType()->in([self::CELLPHONE, self::TELEPHONE])->assert($type);
 
             $this->type = $type;
         } catch (AllOfException $ex) {

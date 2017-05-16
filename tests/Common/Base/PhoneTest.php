@@ -4,14 +4,14 @@ namespace MrPrompt\Centercob\Tests\Common\Base;
 use MrPrompt\Centercob\Common\Base\Phone;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 use MrPrompt\Centercob\Tests\Gateway\Mock;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Phone test case.
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class PhoneTest extends PHPUnit_Framework_TestCase
+class PhoneTest extends TestCase
 {
     /**
      * @see \Centercob\Tests\ChangeProctedAttribute

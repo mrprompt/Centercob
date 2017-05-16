@@ -2,7 +2,7 @@
 namespace MrPrompt\Centercob\Tests\Common\Base;
 
 use Mockery as m;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use MrPrompt\Centercob\Common\Base\Customer;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 
@@ -11,7 +11,7 @@ use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class CustomerTest extends PHPUnit_Framework_TestCase
+class CustomerTest extends TestCase
 {
     /**
      * @see \Centercob\Common\Util\ChangeProtectedAttribute
@@ -88,7 +88,7 @@ class CustomerTest extends PHPUnit_Framework_TestCase
      */
     public function setCodeMustBeReturnNullWhenReceiveFloatValue()
     {
-        $this->customer->setCode(7.9837);
+        $this->assertNull($this->customer->setCode(7.9837));
     }
 
     /**
@@ -215,10 +215,11 @@ class CustomerTest extends PHPUnit_Framework_TestCase
     /**
      * @test
      * @covers \MrPrompt\Centercob\Common\Base\Customer::setHelpfulMaturity()
+     * @expectedException \InvalidArgumentException
      */
-    public function setHelpfulMaturityReturnNullWhenReceiveEmpty()
+    public function setHelpfulMaturityThrowsExceptionWhenReceiveEmpty()
     {
-        $this->assertNull($this->customer->setHelpfulMaturity(''));
+        $this->customer->setHelpfulMaturity('');
     }
 
     /**

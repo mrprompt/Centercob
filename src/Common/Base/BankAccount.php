@@ -132,7 +132,7 @@ class BankAccount
     public function setSecurity($security = false)
     {
         try {
-            Validator::create()->bool()->assert($security);
+            Validator::create()->boolType()->assert($security);
 
             $this->security = $security;
         } catch (AllOfException $ex) {

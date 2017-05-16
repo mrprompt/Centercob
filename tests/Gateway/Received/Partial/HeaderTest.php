@@ -2,7 +2,7 @@
 namespace MrPrompt\Centercob\Tests\Gateway\Received\Partial;
 
 use DateTime;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use MrPrompt\Centercob\Gateway\Received\Partial\Header;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 use MrPrompt\Centercob\Common\Base\Customer;
@@ -14,7 +14,7 @@ use MrPrompt\Centercob\Common\Base\Sequence;
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class HeaderTest extends PHPUnit_Framework_TestCase
+class HeaderTest extends TestCase
 {
     /**
      * @see \Centercob\Common\Util\ChangeProtectedAttribute

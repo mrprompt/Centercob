@@ -99,7 +99,7 @@ class Customer extends Person
         try {
             Validator
                 ::create()
-                ->bool()
+                ->boolType()
                 ->assert($helpfulMaturity);
 
             $this->helpfulMaturity = $helpfulMaturity;
@@ -125,7 +125,7 @@ class Customer extends Person
             Validator
                 ::create()
                 ->notEmpty()
-                ->int()
+                ->intType()
                 ->assert($workingDays);
 
             $this->workingDays = $workingDays;

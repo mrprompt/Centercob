@@ -3,7 +3,7 @@ namespace MrPrompt\Centercob\Tests\Common\Base;
 
 use DateTime;
 use Mockery as m;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use MrPrompt\Centercob\Common\Base\Parcels;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 use MrPrompt\Centercob\Tests\Gateway\Mock;
@@ -13,7 +13,7 @@ use MrPrompt\Centercob\Tests\Gateway\Mock;
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class ParcelsTest extends PHPUnit_Framework_TestCase
+class ParcelsTest extends TestCase
 {
     use ChangeProtectedAttribute;
     use Mock;

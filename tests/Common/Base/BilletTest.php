@@ -5,14 +5,14 @@ use MrPrompt\Centercob\Common\Base\Billet;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 use MrPrompt\Centercob\Gateway\Shipment\Partial\Detail;
 use MrPrompt\Centercob\Tests\Gateway\Mock;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Billet test case.
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class BilletTest extends PHPUnit_Framework_TestCase
+class BilletTest extends TestCase
 {
     /**
      * @see \Centercob\Common\Util\ChangeProctedAttribute

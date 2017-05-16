@@ -57,7 +57,7 @@ class Document
     {
         try {
             Validator
-                ::int()
+                ::intType()
                 ->notEmpty()
                 ->in([self::CPF, self::CNPJ])
                 ->assert($type);
@@ -83,7 +83,7 @@ class Document
     {
         try {
             Validator
-                ::string()
+                ::stringType()
                 ->length(11, 18)
                 ->assert($number);
 

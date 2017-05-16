@@ -114,7 +114,7 @@ class Address
     public function setPostalCode($postalCode)
     {
         try {
-            Validator::string()->notEmpty()->length(8, 8)->assert($postalCode);
+            Validator::stringType()->notEmpty()->length(8, 8)->assert($postalCode);
 
             $this->postalCode = $postalCode;
         } catch (AllOfException $ex) {

@@ -3,7 +3,7 @@ namespace MrPrompt\Centercob\Tests\Gateway\Shipment\Partial;
 
 use MrPrompt\Centercob\Common\Base\Bank;
 use MrPrompt\Centercob\Common\Base\Holder;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use MrPrompt\Centercob\Gateway\Shipment\Partial\Detail;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 use MrPrompt\Centercob\Tests\Gateway\Mock as CentercobMock;
@@ -23,7 +23,7 @@ use MrPrompt\Centercob\Common\Base\Sequence;
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class DetailTest extends PHPUnit_Framework_TestCase
+class DetailTest extends TestCase
 {
     use ChangeProtectedAttribute;
     use CentercobMock;

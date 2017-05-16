@@ -39,7 +39,7 @@ class Dealership
     public function setCode($code)
     {
         try {
-            Validator::string()->length(null, 6)->assert($code);
+            Validator::stringType()->length(null, 6)->assert($code);
 
             $this->code = $code;
         } catch (AllOfException $ex) {

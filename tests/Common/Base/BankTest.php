@@ -4,14 +4,14 @@ namespace MrPrompt\Centercob\Tests\Common\Base;
 use MrPrompt\Centercob\Common\Base\Bank;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 use Mockery as m;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Bank test case.
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class BankTest extends PHPUnit_Framework_TestCase
+class BankTest extends TestCase
 {
     /**
      * @see \Centercob\Tests\ChangeProctedAttribute

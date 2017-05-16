@@ -5,14 +5,14 @@ use MrPrompt\Centercob\Common\Base\Cart;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 use MrPrompt\Centercob\Gateway\Shipment\Partial\Detail;
 use Mockery as m;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Cart test case.
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class CartTest extends \PHPUnit_Framework_TestCase
+class CartTest extends TestCase
 {
     /**
      * @see \Centercob\Tests\ChangeProctedAttribute

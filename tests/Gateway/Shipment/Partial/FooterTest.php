@@ -2,7 +2,7 @@
 namespace MrPrompt\Centercob\Tests\Gateway\Shipment\Partial;
 
 use Mockery as m;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use MrPrompt\Centercob\Gateway\Shipment\Partial\Footer;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 use MrPrompt\Centercob\Tests\Gateway\Mock as CentercobMock;
@@ -12,7 +12,7 @@ use MrPrompt\Centercob\Tests\Gateway\Mock as CentercobMock;
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class FooterTest extends PHPUnit_Framework_TestCase
+class FooterTest extends TestCase
 {
     /**
      * @see \Centercob\Common\Util\ChangeProtectedAttribute
