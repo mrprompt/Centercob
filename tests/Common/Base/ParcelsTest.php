@@ -6,7 +6,7 @@ use Mockery as m;
 use PHPUnit\Framework\TestCase;
 use MrPrompt\Centercob\Common\Base\Parcels;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
-use MrPrompt\Centercob\Tests\Gateway\Mock;
+use MrPrompt\Centercob\Tests\Mock;
 
 /**
  * Parcels test case.

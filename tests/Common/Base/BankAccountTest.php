@@ -5,7 +5,7 @@ use Mockery as m;
 use PHPUnit\Framework\TestCase;
 use MrPrompt\Centercob\Common\Base\BankAccount;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
-use MrPrompt\Centercob\Tests\Gateway\Mock as CentercobMock;
+use MrPrompt\Centercob\Tests\Mock as CentercobMock;
 
 /**
  * Bank test case.

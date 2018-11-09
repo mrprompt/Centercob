@@ -3,8 +3,8 @@ namespace MrPrompt\Centercob\Tests\Common\Base;
 
 use MrPrompt\Centercob\Common\Base\Billet;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
-use MrPrompt\Centercob\Gateway\Shipment\Partial\Detail;
-use MrPrompt\Centercob\Tests\Gateway\Mock;
+use MrPrompt\Centercob\Shipment\Partial\Detail;
+use MrPrompt\Centercob\Tests\Mock;
 use PHPUnit\Framework\TestCase;
 
 /**

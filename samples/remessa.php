@@ -6,28 +6,29 @@
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
+use MrPrompt\Centercob\Factory;
+use MrPrompt\Centercob\Shipment\File;
 use MrPrompt\Centercob\Common\Base\Cart;
 use MrPrompt\Centercob\Common\Base\Sequence;
-use MrPrompt\Centercob\Gateway\Shipment\File;
 
 require __DIR__ . '/../bootstrap.php';
 
 /* @var $today \DateTime */
 $today      = new DateTime();
 
-/* @var $cart \Centercob\Common\Base\Cart */
+/* @var $cart \MrPrompt\Centercob\Common\Base\Cart */
 $cart       = new Cart();
 
 /* @var $lista array */
 $lista      = require __DIR__ . '/cart.php';
 
 foreach ($lista as $linha) {
-    if (in_array($linha['cobranca'], [\Centercob\Common\Base\Charge::BILLET, \Centercob\Common\Base\Charge::PAYMENT_SLIP])) {
+    if (in_array($linha['cobranca'], [\MrPrompt\Centercob\Common\Base\Charge::BILLET, \MrPrompt\Centercob\Common\Base\Charge::PAYMENT_SLIP])) {
         continue;
     }
 
-    /* @var $item \Centercob\Gateway\Shipment\Partial\Detail */
-    $item = \Centercob\Gateway\Factory::createDetailFromArray($linha);
+    /* @var $item \MrPrompt\Centercob\Shipment\Partial\Detail */
+    $item = Factory::createDetailFromArray($linha);
 
     echo 'Tipo: ', $item->getCharge()->getCharging(), PHP_EOL;
     echo 'Comprador: ', $item->getPurchaser()->getName(), PHP_EOL;
@@ -46,13 +47,13 @@ foreach ($lista as $linha) {
 }
 
 try {
-    /* @var $sequence \Centercob\Common\Base\Sequence */
+    /* @var $sequence \MrPrompt\Centercob\Common\Base\Sequence */
     $sequence   = new Sequence(8);
 
-    /* @var $customer \Centercob\Common\Base\Customer */
-    $customer   = \Centercob\Gateway\Factory::createCustomerFromArray(array_shift($lista));
+    /* @var $customer \MrPrompt\Centercob\Common\Base\Customer */
+    $customer   = Factory::createCustomerFromArray(array_shift($lista));
 
-    /* @var $exporter \Centercob\Gateway\Shipment\File */
+    /* @var $exporter \MrPrompt\Centercob\Shipment\File */
     $exporter   = new File($customer, $sequence, $today, __DIR__ . DIRECTORY_SEPARATOR . 'enviados', File::TEMPLATE_GENERATED);
 
     $exporter->setCart($cart);

@@ -2,7 +2,7 @@
 namespace MrPrompt\Centercob\Common\Base;
 
 use ArrayObject;
-use MrPrompt\Centercob\Gateway\Shipment\Partial\Detail;
+use MrPrompt\Centercob\Shipment\Partial\Detail;
 
 /**
  * Credit card

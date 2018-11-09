@@ -7,8 +7,8 @@
  * @author Thiago Paes <mrprompt@gmail.com>
  */
 use MrPrompt\Centercob\Common\Base\Sequence;
-use MrPrompt\Centercob\Gateway\Shipment\File;
-use MrPrompt\Centercob\Gateway\Factory;
+use MrPrompt\Centercob\Shipment\File;
+use MrPrompt\Centercob\Factory;
 
 require __DIR__ . '/../bootstrap.php';
 
@@ -19,25 +19,25 @@ try {
     /* @var $date \DateTime */
     $date       = new DateTime('2015-05-27');
 
-    /* @var $sequence \Centercob\Common\Base\Sequence */
+    /* @var $sequence \MrPrompt\Centercob\Common\Base\Sequence */
     $sequence   = new Sequence(6);
 
-    /* @var $customer \Centercob\Common\Base\Customer */
+    /* @var $customer \MrPrompt\Centercob\Common\Base\Customer */
     $customer   = Factory::createCustomerFromArray(array_shift($lista));
 
-    /* @var $importer \Centercob\Gateway\Shipment\File */
+    /* @var $importer \MrPrompt\Centercob\Shipment\File */
     $importer   = new File($customer, $sequence, $date, __DIR__ . '/enviados', File::TEMPLATE_PROCESSED);
 
     // importing file data
     $result     = $importer->read();
 
-    /* @var \Centercob\Common\Base\Cart */
+    /* @var \MrPrompt\Centercob\Common\Base\Cart */
     $cart = $importer->getCart();
 
     /* @var $lista array */
     $lista = [];
 
-    /* @var $item \Centercob\Gateway\Shipment\Partial\Detail */
+    /* @var $item \MrPrompt\Centercob\Shipment\Partial\Detail */
     foreach ($cart as $item) {
         /* @var $detail array */
         $detail  = Factory::createArrayFromDetail($item);;

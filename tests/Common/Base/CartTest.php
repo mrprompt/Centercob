@@ -3,7 +3,7 @@ namespace MrPrompt\Centercob\Tests\Common\Base;
 
 use MrPrompt\Centercob\Common\Base\Cart;
 use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
-use MrPrompt\Centercob\Gateway\Shipment\Partial\Detail;
+use MrPrompt\Centercob\Shipment\Partial\Detail;
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
 

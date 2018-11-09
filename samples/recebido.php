@@ -6,8 +6,8 @@
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-use MrPrompt\Centercob\Gateway\Factory;
-use MrPrompt\Centercob\Gateway\Received\File;
+use MrPrompt\Centercob\Factory;
+use MrPrompt\Centercob\Received\File;
 
 require __DIR__ . '/../bootstrap.php';
 
@@ -15,14 +15,14 @@ require __DIR__ . '/../bootstrap.php';
 $lista      = require __DIR__ . '/cart.php';
 
 try {
-    /* @var $customer \Centercob\Common\Base\Customer */
+    /* @var $customer \MrPrompt\Centercob\Common\Base\Customer */
     $customer   = Factory::createCustomerFromArray(array_shift($lista));
     $date       = new DateTime('2015-05-19 18:54:42');
 
     $importer   = new File($customer, $date, __DIR__ . '/recebidos');
     $cart       = $importer->getCart();
 
-    /* @var $item \Centercob\Gateway\Received\Partial\Detail */
+    /* @var $item \MrPrompt\Centercob\Received\Partial\Detail */
     foreach ($cart as $item) {
         echo 'Comprador: ', $item->getPurchaser()->getName(), PHP_EOL;
         echo 'Documento: ', $item->getPurchaser()->getDocument()->getNumber(), PHP_EOL;
