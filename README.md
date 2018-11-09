@@ -16,7 +16,7 @@ A integração possui suporte a:
 
 ## Dependências
 
-- PHP 5.6
+- PHP 7.1+
    
 ## Exemplos
 
