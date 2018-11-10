@@ -2,6 +2,8 @@ Centercob
 =========
 
 [![Build Status](https://travis-ci.org/mrprompt/Centercob.svg?branch=master)](https://travis-ci.org/mrprompt/Centercob)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mrprompt/Centercob/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mrprompt/Centercob/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/mrprompt/Centercob/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mrprompt/Centercob/?branch=master)
 
 Biblioteca de integração com a Centercob por meio de troca de arquivos de remessa.
 
