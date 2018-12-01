@@ -2,10 +2,10 @@
 namespace MrPrompt\Centercob\Tests\Received\Partial;
 
 use PHPUnit\Framework\TestCase;
-use MrPrompt\Centercob\Received\Partial\Footer;
-use MrPrompt\Centercob\Common\Base\Sequence;
-use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 use MrPrompt\Centercob\Tests\Mock;
+use MrPrompt\ShipmentCommon\Base\Sequence;
+use MrPrompt\Centercob\Received\Partial\Footer;
+use MrPrompt\ShipmentCommon\Util\ChangeProtectedAttribute;
 
 /**
  * Footer test case.

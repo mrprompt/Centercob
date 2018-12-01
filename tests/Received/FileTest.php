@@ -1,15 +1,15 @@
 <?php
 namespace MrPrompt\Centercob\Tests\Received;
 
-use MrPrompt\Centercob\Common\Base\Cart;
-use MrPrompt\Centercob\Received\Partial\Footer;
-use MrPrompt\Centercob\Received\Partial\Header;
-use MrPrompt\Centercob\Received\File;
-use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
-use MrPrompt\Centercob\Tests\Mock;
 use DateTime;
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
+use MrPrompt\Centercob\Tests\Mock;
+use MrPrompt\Centercob\Received\File;
+use MrPrompt\ShipmentCommon\Base\Cart;
+use MrPrompt\Centercob\Received\Partial\Footer;
+use MrPrompt\Centercob\Received\Partial\Header;
+use MrPrompt\ShipmentCommon\Util\ChangeProtectedAttribute;
 
 /**
  * Signup test case.

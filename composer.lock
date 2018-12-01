@@ -4,8 +4,65 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cb1e4977d8f101399a6ba5d04ff8ab31",
+    "content-hash": "916ae34e618011d060875f7ac155d3ec",
     "packages": [
+        {
+            "name": "mrprompt/shipmentcommon",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mrprompt/ShipmentCommon.git",
+                "reference": "98de4f3cfeed9fcb7032047e6acc7a008e7baec8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mrprompt/ShipmentCommon/zipball/98de4f3cfeed9fcb7032047e6acc7a008e7baec8",
+                "reference": "98de4f3cfeed9fcb7032047e6acc7a008e7baec8",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1",
+                "respect/validation": "^1.1.12"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master@dev",
+                "phpunit/phpunit": "^6.1.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MrPrompt\\ShipmentCommon\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Thiago Paes",
+                    "email": "mrprompt@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Johnathan Cardoso",
+                    "email": "git@spamhunter.johnathan.com.br",
+                    "role": "Collaborator"
+                },
+                {
+                    "name": "Walter Discher Cechinel",
+                    "email": "mistrim@gmail.com",
+                    "role": "Collaborator"
+                },
+                {
+                    "name": "Luís Otávio Cobucci Oblonczyk",
+                    "email": "lcobucci@gmail.com",
+                    "role": "Collaborator"
+                }
+            ],
+            "description": "Common classes used in remittance libraries.",
+            "time": "2018-12-01T03:02:58+00:00"
+        },
         {
             "name": "respect/validation",
             "version": "1.1.29",
@@ -284,12 +341,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mockery/mockery.git",
-                "reference": "a0299757e37696d3e18a61b0369d5d4fe09fc946"
+                "reference": "e269741a9e96f7a6257054ff963fc2b6316cf21a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mockery/mockery/zipball/a0299757e37696d3e18a61b0369d5d4fe09fc946",
-                "reference": "a0299757e37696d3e18a61b0369d5d4fe09fc946",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/e269741a9e96f7a6257054ff963fc2b6316cf21a",
+                "reference": "e269741a9e96f7a6257054ff963fc2b6316cf21a",
                 "shasum": ""
             },
             "require": {
@@ -341,7 +398,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2018-10-12T09:41:15+00:00"
+            "time": "2018-11-22T06:31:11+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -1753,6 +1810,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "mrprompt/shipmentcommon": 20,
         "mockery/mockery": 20
     },
     "prefer-stable": false,

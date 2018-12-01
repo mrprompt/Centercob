@@ -3,11 +3,11 @@ namespace MrPrompt\Centercob\Tests\Received\Partial;
 
 use DateTime;
 use PHPUnit\Framework\TestCase;
-use MrPrompt\Centercob\Received\Partial\Header;
-use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
-use MrPrompt\Centercob\Common\Base\Customer;
 use MrPrompt\Centercob\Tests\Mock;
-use MrPrompt\Centercob\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Customer;
+use MrPrompt\ShipmentCommon\Base\Sequence;
+use MrPrompt\Centercob\Received\Partial\Header;
+use MrPrompt\ShipmentCommon\Util\ChangeProtectedAttribute;
 
 /**
  * Header test case.

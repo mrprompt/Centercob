@@ -2,8 +2,8 @@
 namespace MrPrompt\Centercob\Received\Partial;
 
 use DateTime;
-use MrPrompt\Centercob\Common\Base\Customer;
-use MrPrompt\Centercob\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Customer;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 
 /**
  * File header

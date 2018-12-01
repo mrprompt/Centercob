@@ -38,7 +38,8 @@
   ],
   "require": {
     "php": "^7.1",
-    "respect/validation": "^1.1.12"
+    "respect/validation": "^1.1.12",
+    "mrprompt/shipmentcommon": "dev-master"
   },
   "require-dev": {
     "phpunit/phpunit": "^6.1.3",

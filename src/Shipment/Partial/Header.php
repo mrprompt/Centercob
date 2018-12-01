@@ -2,10 +2,10 @@
 namespace MrPrompt\Centercob\Shipment\Partial;
 
 use DateTime;
-use MrPrompt\Centercob\Common\Base\Customer;
-use MrPrompt\Centercob\Common\Base\Sequence;
-use MrPrompt\Centercob\Common\Type\Numeric;
-use MrPrompt\Centercob\Common\Type\Alphanumeric;
+use MrPrompt\ShipmentCommon\Type\Numeric;
+use MrPrompt\ShipmentCommon\Base\Customer;
+use MrPrompt\ShipmentCommon\Base\Sequence;
+use MrPrompt\ShipmentCommon\Type\Alphanumeric;
 
 /**
  * File header

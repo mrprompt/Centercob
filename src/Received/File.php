@@ -2,9 +2,9 @@
 namespace MrPrompt\Centercob\Received;
 
 use DateTime;
-use MrPrompt\Centercob\Common\Base\Cart;
-use MrPrompt\Centercob\Common\Base\Customer;
-use MrPrompt\Centercob\Common\Util\Number;
+use MrPrompt\ShipmentCommon\Base\Cart;
+use MrPrompt\ShipmentCommon\Base\Customer;
+use MrPrompt\ShipmentCommon\Util\Number;
 use MrPrompt\Centercob\Received\Partial\Detail;
 use MrPrompt\Centercob\Received\Partial\Footer;
 use MrPrompt\Centercob\Received\Partial\Header;

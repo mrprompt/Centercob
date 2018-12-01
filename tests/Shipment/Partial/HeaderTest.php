@@ -4,11 +4,11 @@ namespace MrPrompt\Centercob\Tests\Shipment\Partial;
 use DateTime;
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
+use MrPrompt\ShipmentCommon\Base\Customer;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 use MrPrompt\Centercob\Shipment\Partial\Header;
-use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 use MrPrompt\Centercob\Tests\Mock as CentercobMock;
-use MrPrompt\Centercob\Common\Base\Customer;
-use MrPrompt\Centercob\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Util\ChangeProtectedAttribute;
 
 /**
  * Header test case.

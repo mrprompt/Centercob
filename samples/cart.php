@@ -4,11 +4,11 @@
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-use MrPrompt\Centercob\Common\Base\Bank;
-use MrPrompt\Centercob\Common\Base\Charge;
-use MrPrompt\Centercob\Common\Base\ConsumerUnity;
-use MrPrompt\Centercob\Common\Base\CreditCard;
-use MrPrompt\Centercob\Common\Base\Occurrence;
+use MrPrompt\ShipmentCommon\Base\Bank;
+use MrPrompt\ShipmentCommon\Base\Charge;
+use MrPrompt\ShipmentCommon\Base\ConsumerUnity;
+use MrPrompt\ShipmentCommon\Base\CreditCard;
+use MrPrompt\ShipmentCommon\Base\Occurrence;
 
 /* @var $vencimento \DateTime */
 $vencimento = (new DateTime())->add(new DateInterval('P30D'));
