@@ -21,7 +21,7 @@ use MrPrompt\ShipmentCommon\Base\ConsumerUnity;
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class Detail
+class Detail extends \stdClass
 {
     /**
      * Type of register
@@ -399,14 +399,14 @@ class Detail
         $result .= substr(str_pad($this->purchaser->getName(), 70, Alphanumeric::FILL, Alphanumeric::ALIGN), 0, 70);
 
         // fantasy name
-        $result .= substr(str_pad($this->purchaser->getPurchaserFantasyName(), 70, Alphanumeric::FILL, Alphanumeric::ALIGN), 0, 70);
+        $result .= substr(str_pad($this->purchaser->getFantasyName(), 70, Alphanumeric::FILL, Alphanumeric::ALIGN), 0, 70);
 
         // social reason
-        $result .= substr(str_pad($this->purchaser->getPurchaserSocialReason(), 70, Alphanumeric::FILL, Alphanumeric::ALIGN), 0, 70);
+        $result .= substr(str_pad($this->purchaser->getSocialReason(), 70, Alphanumeric::FILL, Alphanumeric::ALIGN), 0, 70);
 
         // document number
         $result .= substr(str_pad($this->purchaser->getDocument()->getNumber(), 15, Alphanumeric::FILL, Alphanumeric::ALIGN), 0, 15);
-        $result .= substr(str_pad($this->purchaser->getPurchaserStateRegistration(), 20, Alphanumeric::FILL, Alphanumeric::ALIGN), 0, 20);
+        $result .= substr(str_pad($this->purchaser->getStateRegistration(), 20, Alphanumeric::FILL, Alphanumeric::ALIGN), 0, 20);
 
         // purchaser birth day
         $result .= $this->purchaser->getBirth()->format(self::DATE_FORMAT);

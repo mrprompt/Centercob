@@ -373,8 +373,8 @@ class File
         $purchaser      = new Purchaser();
         $purchaser->setPerson(substr($row, 157, 1));
         $purchaser->setName(substr($row, 158, 70));
-        $purchaser->setPurchaserFantasyName(substr($row, 228, 70));
-        $purchaser->setPurchaserSocialReason(substr($row, 298, 70));
+        $purchaser->setFantasyName(substr($row, 228, 70));
+        $purchaser->setSocialReason(substr($row, 298, 70));
         $purchaser->setBirth(DateTime::createFromFormat('dmY', substr($row, 403, 8)));
         $purchaser->setEmail(new Email(substr($row, 411, 50)));
         $purchaser->setHomePhone(new Phone(substr($row, 577, 11), Phone::TELEPHONE));

@@ -9,7 +9,7 @@
 use MrPrompt\Centercob\Factory;
 use MrPrompt\Centercob\Received\File;
 
-require __DIR__ . '/../bootstrap.php';
+require __DIR__ . '/bootstrap.php';
 
 /* @var $lista array */
 $lista      = require __DIR__ . '/cart.php';

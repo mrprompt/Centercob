@@ -21,7 +21,7 @@ return [
         'vendedor'          => [
             'codigo'        => 1234, // Código de Cliente na Centercob
             'nome'          => 'NOME DA EMPRESA',
-            'documento'     => '', // cpf/cnpj de cadastro do vendedor
+            'documento'     => '11111111111', // cpf/cnpj de cadastro do vendedor
             'nascimento'    => '01011970', // data de nascimento do vendeor
             'email'         => 'vendedor@loja.com.br', // email do vendedor
             'telefone1'     => '4811111111',
@@ -107,7 +107,7 @@ return [
         'vendedor'          => [
             'codigo'        => 1234, // Código de Cliente na Centercob
             'nome'          => 'NOME DA EMPRESA',
-            'documento'     => '', // cpf/cnpj de cadastro do vendedor
+            'documento'     => '11111111111', // cpf/cnpj de cadastro do vendedor
             'nascimento'    => '01011970', // data de nascimento do vendeor
             'email'         => 'vendedor@loja.com.br', // email do vendedor
             'telefone1'     => '4811111111',
@@ -226,7 +226,7 @@ return [
         'vendedor'          => [
             'codigo'        => 1234, // Código de Cliente na Centercob
             'nome'          => 'NOME DA EMPRESA',
-            'documento'     => '', // cpf/cnpj de cadastro do vendedor
+            'documento'     => '111111111', // cpf/cnpj de cadastro do vendedor
             'nascimento'    => '01011970', // data de nascimento do vendeor
             'email'         => 'vendedor@loja.com.br', // email do vendedor
             'telefone1'     => '4811111111',

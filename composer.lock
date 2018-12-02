@@ -12,17 +12,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mrprompt/ShipmentCommon.git",
-                "reference": "98de4f3cfeed9fcb7032047e6acc7a008e7baec8"
+                "reference": "701580f1a1d9cb50bee6423a14412f73ad260733"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mrprompt/ShipmentCommon/zipball/98de4f3cfeed9fcb7032047e6acc7a008e7baec8",
-                "reference": "98de4f3cfeed9fcb7032047e6acc7a008e7baec8",
+                "url": "https://api.github.com/repos/mrprompt/ShipmentCommon/zipball/701580f1a1d9cb50bee6423a14412f73ad260733",
+                "reference": "701580f1a1d9cb50bee6423a14412f73ad260733",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1",
-                "respect/validation": "^1.1.12"
+                "php": "^7.1"
             },
             "require-dev": {
                 "mockery/mockery": "dev-master@dev",
@@ -61,7 +60,7 @@
                 }
             ],
             "description": "Common classes used in remittance libraries.",
-            "time": "2018-12-01T03:02:58+00:00"
+            "time": "2018-12-02T01:23:06+00:00"
         },
         {
             "name": "respect/validation",

@@ -39,7 +39,7 @@ abstract class Factory
     {
         $document = new Document();
         $document->setType(strlen($campos['documento']) === 11 ? Document::CPF : Document::CNPJ);
-        $document->setNumber($campos['documento']);
+        $document->setNumber((int) $campos['documento']);
 
         return $document;
     }

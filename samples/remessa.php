@@ -11,7 +11,7 @@ use MrPrompt\Centercob\Shipment\File;
 use MrPrompt\ShipmentCommon\Base\Cart;
 use MrPrompt\ShipmentCommon\Base\Sequence;
 
-require __DIR__ . '/../bootstrap.php';
+require __DIR__ . '/bootstrap.php';
 
 /* @var $today \DateTime */
 $today      = new DateTime();
@@ -40,7 +40,7 @@ foreach ($lista as $linha) {
         echo '    Qtd ', $parcel->getQuantity(), PHP_EOL;
     }
 
-    echo 'Status: ', $item->getCharge()->getOccurrence()->getDescription(), PHP_EOL;
+    // echo 'Status: ', $item->getCharge()->getOccurrence()->getDescription(), PHP_EOL;
     echo PHP_EOL, PHP_EOL;
 
     $cart->addItem($item);

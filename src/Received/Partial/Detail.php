@@ -16,7 +16,7 @@ use MrPrompt\ShipmentCommon\Base\ConsumerUnity;
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class Detail
+class Detail extends \stdClass
 {
     /**
      * Type of register
@@ -72,7 +72,7 @@ class Detail
     public function __construct($row)
     {
         $consumerUnity = new ConsumerUnity();
-        $consumerUnity->setNumber(substr($row, 1, 25));
+        $consumerUnity->setNumber((int) substr($row, 1, 25));
 
         $date       = substr($row, 28, 8);
         $occurrence = new Occurrence();
@@ -90,7 +90,7 @@ class Detail
         $document->setNumber(preg_replace('/[^[:digit:]]/', '', substr($row, 134, 20)));
 
         $authorization = new Authorization();
-        $authorization->setNumber(substr($row, 154, 10));
+        $authorization->setNumber((int) substr($row, 154, 10));
 
         $dealership = new Dealership();
         $dealership->setCode(substr($row, 164, 6));

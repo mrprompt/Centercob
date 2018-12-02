@@ -10,7 +10,7 @@ use MrPrompt\ShipmentCommon\Base\Sequence;
 use MrPrompt\Centercob\Shipment\File;
 use MrPrompt\Centercob\Factory;
 
-require __DIR__ . '/../bootstrap.php';
+require __DIR__ . '/bootstrap.php';
 
 /* @var $lista array */
 $lista      = require __DIR__ . '/cart.php';
