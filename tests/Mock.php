@@ -262,7 +262,7 @@ trait Mock
             ->byDefault();
 
         $purchaser
-            ->shouldReceive('getPurchaserFantasyName')
+            ->shouldReceive('getFantasyName')
             ->andReturn('Fantasy name')
             ->byDefault();
 
@@ -272,17 +272,17 @@ trait Mock
             ->byDefault();
 
         $purchaser
-            ->shouldReceive('getPurchaserSocialReason')
+            ->shouldReceive('getSocialReason')
             ->andReturn('Social Reason')
             ->byDefault();
 
         $purchaser
-            ->shouldReceive('getPurchaserDocument')
+            ->shouldReceive('getDocument')
             ->andReturn($this->documentMock())
             ->byDefault();
 
         $purchaser
-            ->shouldReceive('getPurchaserStateRegistration')
+            ->shouldReceive('getStateRegistration')
             ->andReturn(1)
             ->byDefault();
 
