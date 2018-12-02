@@ -5,7 +5,7 @@ use PHPUnit\Framework\TestCase;
 use MrPrompt\Centercob\Tests\Mock;
 use MrPrompt\ShipmentCommon\Base\Sequence;
 use MrPrompt\Centercob\Received\Partial\Footer;
-use MrPrompt\ShipmentCommon\Util\ChangeProtectedAttribute;
+use MrPrompt\Centercob\Tests\ChangeProtectedAttribute;
 
 /**
  * Footer test case.

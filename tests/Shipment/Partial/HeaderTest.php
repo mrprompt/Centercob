@@ -8,7 +8,7 @@ use MrPrompt\ShipmentCommon\Base\Customer;
 use MrPrompt\ShipmentCommon\Base\Sequence;
 use MrPrompt\Centercob\Shipment\Partial\Header;
 use MrPrompt\Centercob\Tests\Mock as CentercobMock;
-use MrPrompt\ShipmentCommon\Util\ChangeProtectedAttribute;
+use MrPrompt\Centercob\Tests\ChangeProtectedAttribute;
 
 /**
  * Header test case.

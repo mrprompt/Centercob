@@ -9,7 +9,7 @@ use MrPrompt\Centercob\Received\File;
 use MrPrompt\ShipmentCommon\Base\Cart;
 use MrPrompt\Centercob\Received\Partial\Footer;
 use MrPrompt\Centercob\Received\Partial\Header;
-use MrPrompt\ShipmentCommon\Util\ChangeProtectedAttribute;
+use MrPrompt\Centercob\Tests\ChangeProtectedAttribute;
 
 /**
  * Signup test case.

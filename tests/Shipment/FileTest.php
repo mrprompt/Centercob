@@ -11,7 +11,7 @@ use MrPrompt\ShipmentCommon\Base\Cart;
 use MrPrompt\ShipmentCommon\Base\Sequence;
 use MrPrompt\Centercob\Shipment\Partial\Footer;
 use MrPrompt\Centercob\Shipment\Partial\Header;
-use MrPrompt\ShipmentCommon\Util\ChangeProtectedAttribute;
+use MrPrompt\Centercob\Tests\ChangeProtectedAttribute;
 
 /**
  * file test case.
@@ -21,7 +21,7 @@ use MrPrompt\ShipmentCommon\Util\ChangeProtectedAttribute;
 class FileTest extends TestCase
 {
     /**
-     * @see \MrPrompt\ShipmentCommon\Util\ChangeProtectedAttribute
+     * @see \MrPrompt\Centercob\Tests\ChangeProtectedAttribute
      */
     use ChangeProtectedAttribute;
 

@@ -16,7 +16,7 @@ use MrPrompt\Centercob\Shipment\Partial\Detail;
 use MrPrompt\ShipmentCommon\Base\Authorization;
 use MrPrompt\ShipmentCommon\Base\ConsumerUnity;
 use MrPrompt\Centercob\Tests\Mock as CentercobMock;
-use MrPrompt\ShipmentCommon\Util\ChangeProtectedAttribute;
+use MrPrompt\Centercob\Tests\ChangeProtectedAttribute;
 
 /**
  * Detail test case.

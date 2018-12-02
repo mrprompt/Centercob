@@ -12,7 +12,7 @@ use MrPrompt\ShipmentCommon\Base\Occurrence;
 use MrPrompt\Centercob\Received\Partial\Detail;
 use MrPrompt\ShipmentCommon\Base\Authorization;
 use MrPrompt\ShipmentCommon\Base\ConsumerUnity;
-use MrPrompt\ShipmentCommon\Util\ChangeProtectedAttribute;
+use MrPrompt\Centercob\Tests\ChangeProtectedAttribute;
 
 /**
  * Detail test case.
