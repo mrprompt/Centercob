@@ -1,22 +1,22 @@
 <?php
 namespace MrPrompt\Centercob\Received\Partial;
 
-use MrPrompt\Centercob\Common\Base\Authorization;
-use MrPrompt\Centercob\Common\Base\Client;
-use MrPrompt\Centercob\Common\Base\ConsumerUnity;
-use MrPrompt\Centercob\Common\Base\Dealership;
-use MrPrompt\Centercob\Common\Base\Document;
-use MrPrompt\Centercob\Common\Base\Occurrence;
-use MrPrompt\Centercob\Common\Base\Parcel;
-use MrPrompt\Centercob\Common\Base\Purchaser;
-use MrPrompt\Centercob\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Client;
+use MrPrompt\ShipmentCommon\Base\Parcel;
+use MrPrompt\ShipmentCommon\Base\Document;
+use MrPrompt\ShipmentCommon\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Purchaser;
+use MrPrompt\ShipmentCommon\Base\Dealership;
+use MrPrompt\ShipmentCommon\Base\Occurrence;
+use MrPrompt\ShipmentCommon\Base\Authorization;
+use MrPrompt\ShipmentCommon\Base\ConsumerUnity;
 
 /**
  * File detail
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class Detail
+class Detail extends \stdClass
 {
     /**
      * Type of register
@@ -72,7 +72,7 @@ class Detail
     public function __construct($row)
     {
         $consumerUnity = new ConsumerUnity();
-        $consumerUnity->setNumber(substr($row, 1, 25));
+        $consumerUnity->setNumber((int) substr($row, 1, 25));
 
         $date       = substr($row, 28, 8);
         $occurrence = new Occurrence();
@@ -90,7 +90,7 @@ class Detail
         $document->setNumber(preg_replace('/[^[:digit:]]/', '', substr($row, 134, 20)));
 
         $authorization = new Authorization();
-        $authorization->setNumber(substr($row, 154, 10));
+        $authorization->setNumber((int) substr($row, 154, 10));
 
         $dealership = new Dealership();
         $dealership->setCode(substr($row, 164, 6));

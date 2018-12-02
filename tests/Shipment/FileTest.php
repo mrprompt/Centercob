@@ -1,17 +1,17 @@
 <?php
 namespace MrPrompt\Centercob\Tests\Shipment;
 
-use MrPrompt\Centercob\Common\Base\Cart;
 use DateTime;
 use Mockery as m;
+use org\bovigo\vfs\vfsStream;
 use PHPUnit\Framework\TestCase;
-use MrPrompt\Centercob\Shipment\File;
-use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 use MrPrompt\Centercob\Tests\Mock;
+use MrPrompt\Centercob\Shipment\File;
+use MrPrompt\ShipmentCommon\Base\Cart;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 use MrPrompt\Centercob\Shipment\Partial\Footer;
 use MrPrompt\Centercob\Shipment\Partial\Header;
-use MrPrompt\Centercob\Common\Base\Sequence;
-use org\bovigo\vfs\vfsStream;
+use MrPrompt\Centercob\Tests\ChangeProtectedAttribute;
 
 /**
  * file test case.
@@ -21,7 +21,7 @@ use org\bovigo\vfs\vfsStream;
 class FileTest extends TestCase
 {
     /**
-     * @see \MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute
+     * @see \MrPrompt\Centercob\Tests\ChangeProtectedAttribute
      */
     use ChangeProtectedAttribute;
 

@@ -2,17 +2,17 @@
 namespace MrPrompt\Centercob\Tests\Received\Partial;
 
 use PHPUnit\Framework\TestCase;
-use MrPrompt\Centercob\Received\Partial\Detail;
-use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 use MrPrompt\Centercob\Tests\Mock;
-use MrPrompt\Centercob\Common\Base\Authorization;
-use MrPrompt\Centercob\Common\Base\Client;
-use MrPrompt\Centercob\Common\Base\ConsumerUnity;
-use MrPrompt\Centercob\Common\Base\Dealership;
-use MrPrompt\Centercob\Common\Base\Occurrence;
-use MrPrompt\Centercob\Common\Base\Parcel;
-use MrPrompt\Centercob\Common\Base\Purchaser;
-use MrPrompt\Centercob\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Client;
+use MrPrompt\ShipmentCommon\Base\Parcel;
+use MrPrompt\ShipmentCommon\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Purchaser;
+use MrPrompt\ShipmentCommon\Base\Dealership;
+use MrPrompt\ShipmentCommon\Base\Occurrence;
+use MrPrompt\Centercob\Received\Partial\Detail;
+use MrPrompt\ShipmentCommon\Base\Authorization;
+use MrPrompt\ShipmentCommon\Base\ConsumerUnity;
+use MrPrompt\Centercob\Tests\ChangeProtectedAttribute;
 
 /**
  * Detail test case.

@@ -6,11 +6,11 @@
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-use MrPrompt\Centercob\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 use MrPrompt\Centercob\Shipment\File;
 use MrPrompt\Centercob\Factory;
 
-require __DIR__ . '/../bootstrap.php';
+require __DIR__ . '/bootstrap.php';
 
 /* @var $lista array */
 $lista      = require __DIR__ . '/cart.php';
@@ -19,10 +19,10 @@ try {
     /* @var $date \DateTime */
     $date       = new DateTime('2015-05-27');
 
-    /* @var $sequence \MrPrompt\Centercob\Common\Base\Sequence */
+    /* @var $sequence \MrPrompt\ShipmentCommon\Base\Sequence */
     $sequence   = new Sequence(6);
 
-    /* @var $customer \MrPrompt\Centercob\Common\Base\Customer */
+    /* @var $customer \MrPrompt\ShipmentCommon\Base\Customer */
     $customer   = Factory::createCustomerFromArray(array_shift($lista));
 
     /* @var $importer \MrPrompt\Centercob\Shipment\File */
@@ -31,7 +31,7 @@ try {
     // importing file data
     $result     = $importer->read();
 
-    /* @var \MrPrompt\Centercob\Common\Base\Cart */
+    /* @var \MrPrompt\ShipmentCommon\Base\Cart */
     $cart = $importer->getCart();
 
     /* @var $lista array */

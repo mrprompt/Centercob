@@ -4,8 +4,8 @@ namespace MrPrompt\Centercob\Tests\Shipment\Partial;
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
 use MrPrompt\Centercob\Shipment\Partial\Footer;
-use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
 use MrPrompt\Centercob\Tests\Mock as CentercobMock;
+use MrPrompt\Centercob\Tests\ChangeProtectedAttribute;
 
 /**
  * Footer test case.
@@ -55,7 +55,7 @@ class FooterTest extends TestCase
      * @test
      * @covers \MrPrompt\Centercob\Shipment\Partial\Footer::__construct()
      * @covers \MrPrompt\Centercob\Shipment\Partial\Footer::render()
-     * @covers \MrPrompt\Centercob\Common\Base\Sequence::getValue()
+     * @covers \MrPrompt\ShipmentCommon\Base\Sequence::getValue()
      */
     public function renderReturnExactLength()
     {

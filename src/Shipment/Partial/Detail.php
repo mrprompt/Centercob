@@ -1,27 +1,27 @@
 <?php
 namespace MrPrompt\Centercob\Shipment\Partial;
 
-use MrPrompt\Centercob\Common\Base\Authorization;
-use MrPrompt\Centercob\Common\Base\BankAccount;
-use MrPrompt\Centercob\Common\Base\Charge;
-use MrPrompt\Centercob\Common\Base\ConsumerUnity;
-use MrPrompt\Centercob\Common\Base\CreditCard;
-use MrPrompt\Centercob\Common\Base\Customer;
-use MrPrompt\Centercob\Common\Base\Dealership;
-use MrPrompt\Centercob\Common\Base\Parcels;
-use MrPrompt\Centercob\Common\Base\Purchaser;
-use MrPrompt\Centercob\Common\Base\Seller;
-use MrPrompt\Centercob\Common\Base\Sequence;
-use MrPrompt\Centercob\Common\Base\Holder;
-use MrPrompt\Centercob\Common\Type\Alphanumeric;
-use MrPrompt\Centercob\Common\Type\Numeric;
+use MrPrompt\ShipmentCommon\Base\Charge;
+use MrPrompt\ShipmentCommon\Base\Holder;
+use MrPrompt\ShipmentCommon\Base\Seller;
+use MrPrompt\ShipmentCommon\Base\Parcels;
+use MrPrompt\ShipmentCommon\Type\Numeric;
+use MrPrompt\ShipmentCommon\Base\Customer;
+use MrPrompt\ShipmentCommon\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Purchaser;
+use MrPrompt\ShipmentCommon\Base\CreditCard;
+use MrPrompt\ShipmentCommon\Base\Dealership;
+use MrPrompt\ShipmentCommon\Base\BankAccount;
+use MrPrompt\ShipmentCommon\Type\Alphanumeric;
+use MrPrompt\ShipmentCommon\Base\Authorization;
+use MrPrompt\ShipmentCommon\Base\ConsumerUnity;
 
 /**
  * File detail
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class Detail
+class Detail extends \stdClass
 {
     /**
      * Type of register
@@ -399,14 +399,14 @@ class Detail
         $result .= substr(str_pad($this->purchaser->getName(), 70, Alphanumeric::FILL, Alphanumeric::ALIGN), 0, 70);
 
         // fantasy name
-        $result .= substr(str_pad($this->purchaser->getPurchaserFantasyName(), 70, Alphanumeric::FILL, Alphanumeric::ALIGN), 0, 70);
+        $result .= substr(str_pad($this->purchaser->getFantasyName(), 70, Alphanumeric::FILL, Alphanumeric::ALIGN), 0, 70);
 
         // social reason
-        $result .= substr(str_pad($this->purchaser->getPurchaserSocialReason(), 70, Alphanumeric::FILL, Alphanumeric::ALIGN), 0, 70);
+        $result .= substr(str_pad($this->purchaser->getSocialReason(), 70, Alphanumeric::FILL, Alphanumeric::ALIGN), 0, 70);
 
         // document number
         $result .= substr(str_pad($this->purchaser->getDocument()->getNumber(), 15, Alphanumeric::FILL, Alphanumeric::ALIGN), 0, 15);
-        $result .= substr(str_pad($this->purchaser->getPurchaserStateRegistration(), 20, Alphanumeric::FILL, Alphanumeric::ALIGN), 0, 20);
+        $result .= substr(str_pad($this->purchaser->getStateRegistration(), 20, Alphanumeric::FILL, Alphanumeric::ALIGN), 0, 20);
 
         // purchaser birth day
         $result .= $this->purchaser->getBirth()->format(self::DATE_FORMAT);

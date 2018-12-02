@@ -8,22 +8,22 @@
  */
 use MrPrompt\Centercob\Factory;
 use MrPrompt\Centercob\Shipment\File;
-use MrPrompt\Centercob\Common\Base\Cart;
-use MrPrompt\Centercob\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Cart;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 
-require __DIR__ . '/../bootstrap.php';
+require __DIR__ . '/bootstrap.php';
 
 /* @var $today \DateTime */
 $today      = new DateTime();
 
-/* @var $cart \MrPrompt\Centercob\Common\Base\Cart */
+/* @var $cart \MrPrompt\ShipmentCommon\Base\Cart */
 $cart       = new Cart();
 
 /* @var $lista array */
 $lista      = require __DIR__ . '/cart.php';
 
 foreach ($lista as $linha) {
-    if (in_array($linha['cobranca'], [\MrPrompt\Centercob\Common\Base\Charge::BILLET, \MrPrompt\Centercob\Common\Base\Charge::PAYMENT_SLIP])) {
+    if (in_array($linha['cobranca'], [\MrPrompt\ShipmentCommon\Base\Charge::BILLET, \MrPrompt\ShipmentCommon\Base\Charge::PAYMENT_SLIP])) {
         continue;
     }
 
@@ -40,17 +40,17 @@ foreach ($lista as $linha) {
         echo '    Qtd ', $parcel->getQuantity(), PHP_EOL;
     }
 
-    echo 'Status: ', $item->getCharge()->getOccurrence()->getDescription(), PHP_EOL;
+    // echo 'Status: ', $item->getCharge()->getOccurrence()->getDescription(), PHP_EOL;
     echo PHP_EOL, PHP_EOL;
 
     $cart->addItem($item);
 }
 
 try {
-    /* @var $sequence \MrPrompt\Centercob\Common\Base\Sequence */
+    /* @var $sequence \MrPrompt\ShipmentCommon\Base\Sequence */
     $sequence   = new Sequence(8);
 
-    /* @var $customer \MrPrompt\Centercob\Common\Base\Customer */
+    /* @var $customer \MrPrompt\ShipmentCommon\Base\Customer */
     $customer   = Factory::createCustomerFromArray(array_shift($lista));
 
     /* @var $exporter \MrPrompt\Centercob\Shipment\File */

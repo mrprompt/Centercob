@@ -1,22 +1,22 @@
 <?php
 namespace MrPrompt\Centercob\Tests\Shipment\Partial;
 
-use MrPrompt\Centercob\Common\Base\Bank;
-use MrPrompt\Centercob\Common\Base\Holder;
 use PHPUnit\Framework\TestCase;
+use MrPrompt\ShipmentCommon\Base\Bank;
+use MrPrompt\ShipmentCommon\Base\Charge;
+use MrPrompt\ShipmentCommon\Base\Holder;
+use MrPrompt\ShipmentCommon\Base\Seller;
+use MrPrompt\ShipmentCommon\Base\Parcels;
+use MrPrompt\ShipmentCommon\Base\Customer;
+use MrPrompt\ShipmentCommon\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Purchaser;
+use MrPrompt\ShipmentCommon\Base\CreditCard;
+use MrPrompt\ShipmentCommon\Base\BankAccount;
 use MrPrompt\Centercob\Shipment\Partial\Detail;
-use MrPrompt\Centercob\Common\Util\ChangeProtectedAttribute;
+use MrPrompt\ShipmentCommon\Base\Authorization;
+use MrPrompt\ShipmentCommon\Base\ConsumerUnity;
 use MrPrompt\Centercob\Tests\Mock as CentercobMock;
-use MrPrompt\Centercob\Common\Base\Customer;
-use MrPrompt\Centercob\Common\Base\Charge;
-use MrPrompt\Centercob\Common\Base\Seller;
-use MrPrompt\Centercob\Common\Base\Purchaser;
-use MrPrompt\Centercob\Common\Base\Parcels;
-use MrPrompt\Centercob\Common\Base\Authorization;
-use MrPrompt\Centercob\Common\Base\CreditCard;
-use MrPrompt\Centercob\Common\Base\BankAccount;
-use MrPrompt\Centercob\Common\Base\ConsumerUnity;
-use MrPrompt\Centercob\Common\Base\Sequence;
+use MrPrompt\Centercob\Tests\ChangeProtectedAttribute;
 
 /**
  * Detail test case.

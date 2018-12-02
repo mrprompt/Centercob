@@ -1,7 +1,7 @@
 <?php
 namespace MrPrompt\Centercob\Received\Partial;
 
-use MrPrompt\Centercob\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 
 /**
  * File footer

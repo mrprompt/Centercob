@@ -9,13 +9,13 @@
 use MrPrompt\Centercob\Factory;
 use MrPrompt\Centercob\Received\File;
 
-require __DIR__ . '/../bootstrap.php';
+require __DIR__ . '/bootstrap.php';
 
 /* @var $lista array */
 $lista      = require __DIR__ . '/cart.php';
 
 try {
-    /* @var $customer \MrPrompt\Centercob\Common\Base\Customer */
+    /* @var $customer \MrPrompt\ShipmentCommon\Base\Customer */
     $customer   = Factory::createCustomerFromArray(array_shift($lista));
     $date       = new DateTime('2015-05-19 18:54:42');
 

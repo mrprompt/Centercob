@@ -2,29 +2,29 @@
 namespace MrPrompt\Centercob\Shipment;
 
 use DateTime;
-use MrPrompt\Centercob\Common\Base\Address;
-use MrPrompt\Centercob\Common\Base\Authorization;
-use MrPrompt\Centercob\Common\Base\Bank;
-use MrPrompt\Centercob\Common\Base\BankAccount;
-use MrPrompt\Centercob\Common\Base\Cart;
-use MrPrompt\Centercob\Common\Base\Charge;
-use MrPrompt\Centercob\Common\Base\ConsumerUnity;
-use MrPrompt\Centercob\Common\Base\CreditCard;
-use MrPrompt\Centercob\Common\Base\Customer;
-use MrPrompt\Centercob\Common\Base\Document;
-use MrPrompt\Centercob\Common\Base\Email;
-use MrPrompt\Centercob\Common\Base\Holder;
-use MrPrompt\Centercob\Common\Base\Occurrence;
-use MrPrompt\Centercob\Common\Base\Parcel;
-use MrPrompt\Centercob\Common\Base\Parcels;
-use MrPrompt\Centercob\Common\Base\Phone;
-use MrPrompt\Centercob\Common\Base\Purchaser;
-use MrPrompt\Centercob\Common\Base\Seller;
-use MrPrompt\Centercob\Common\Base\Sequence;
-use MrPrompt\Centercob\Common\Util\Number;
+use MrPrompt\ShipmentCommon\Base\Bank;
+use MrPrompt\ShipmentCommon\Base\Cart;
+use MrPrompt\ShipmentCommon\Base\Email;
+use MrPrompt\ShipmentCommon\Base\Phone;
+use MrPrompt\ShipmentCommon\Base\Charge;
+use MrPrompt\ShipmentCommon\Base\Holder;
+use MrPrompt\ShipmentCommon\Base\Parcel;
+use MrPrompt\ShipmentCommon\Base\Seller;
+use MrPrompt\ShipmentCommon\Util\Number;
+use MrPrompt\ShipmentCommon\Base\Address;
+use MrPrompt\ShipmentCommon\Base\Parcels;
+use MrPrompt\ShipmentCommon\Base\Customer;
+use MrPrompt\ShipmentCommon\Base\Document;
+use MrPrompt\ShipmentCommon\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Purchaser;
+use MrPrompt\ShipmentCommon\Base\CreditCard;
+use MrPrompt\ShipmentCommon\Base\Occurrence;
+use MrPrompt\ShipmentCommon\Base\BankAccount;
 use MrPrompt\Centercob\Shipment\Partial\Detail;
 use MrPrompt\Centercob\Shipment\Partial\Footer;
 use MrPrompt\Centercob\Shipment\Partial\Header;
+use MrPrompt\ShipmentCommon\Base\Authorization;
+use MrPrompt\ShipmentCommon\Base\ConsumerUnity;
 
 /**
  * Shipment file class
@@ -373,8 +373,8 @@ class File
         $purchaser      = new Purchaser();
         $purchaser->setPerson(substr($row, 157, 1));
         $purchaser->setName(substr($row, 158, 70));
-        $purchaser->setPurchaserFantasyName(substr($row, 228, 70));
-        $purchaser->setPurchaserSocialReason(substr($row, 298, 70));
+        $purchaser->setFantasyName(substr($row, 228, 70));
+        $purchaser->setSocialReason(substr($row, 298, 70));
         $purchaser->setBirth(DateTime::createFromFormat('dmY', substr($row, 403, 8)));
         $purchaser->setEmail(new Email(substr($row, 411, 50)));
         $purchaser->setHomePhone(new Phone(substr($row, 577, 11), Phone::TELEPHONE));

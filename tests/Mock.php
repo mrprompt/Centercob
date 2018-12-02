@@ -1,30 +1,30 @@
 <?php
 namespace MrPrompt\Centercob\Tests;
 
-use MrPrompt\Centercob\Common\Base\Address;
-use MrPrompt\Centercob\Common\Base\Authorization;
-use MrPrompt\Centercob\Common\Base\Bank;
-use MrPrompt\Centercob\Common\Base\BankAccount;
-use MrPrompt\Centercob\Common\Base\Billet;
-use MrPrompt\Centercob\Common\Base\Charge;
-use MrPrompt\Centercob\Common\Base\Client;
-use MrPrompt\Centercob\Common\Base\ConsumerUnity;
-use MrPrompt\Centercob\Common\Base\CreditCard;
-use MrPrompt\Centercob\Common\Base\Customer;
-use MrPrompt\Centercob\Common\Base\Dealership;
-use MrPrompt\Centercob\Common\Base\Document;
-use MrPrompt\Centercob\Common\Base\Email;
-use MrPrompt\Centercob\Common\Base\Holder;
-use MrPrompt\Centercob\Common\Base\Occurrence;
-use MrPrompt\Centercob\Common\Base\Parcel;
-use MrPrompt\Centercob\Common\Base\Parcels;
-use MrPrompt\Centercob\Common\Base\Person;
-use MrPrompt\Centercob\Common\Base\Phone;
-use MrPrompt\Centercob\Common\Base\Purchaser;
-use MrPrompt\Centercob\Common\Base\Seller;
-use MrPrompt\Centercob\Common\Base\Sequence;
 use DateTime;
 use Mockery as m;
+use MrPrompt\ShipmentCommon\Base\Bank;
+use MrPrompt\ShipmentCommon\Base\Email;
+use MrPrompt\ShipmentCommon\Base\Phone;
+use MrPrompt\ShipmentCommon\Base\Billet;
+use MrPrompt\ShipmentCommon\Base\Charge;
+use MrPrompt\ShipmentCommon\Base\Client;
+use MrPrompt\ShipmentCommon\Base\Holder;
+use MrPrompt\ShipmentCommon\Base\Parcel;
+use MrPrompt\ShipmentCommon\Base\Person;
+use MrPrompt\ShipmentCommon\Base\Seller;
+use MrPrompt\ShipmentCommon\Base\Address;
+use MrPrompt\ShipmentCommon\Base\Parcels;
+use MrPrompt\ShipmentCommon\Base\Customer;
+use MrPrompt\ShipmentCommon\Base\Document;
+use MrPrompt\ShipmentCommon\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Purchaser;
+use MrPrompt\ShipmentCommon\Base\CreditCard;
+use MrPrompt\ShipmentCommon\Base\Dealership;
+use MrPrompt\ShipmentCommon\Base\Occurrence;
+use MrPrompt\ShipmentCommon\Base\BankAccount;
+use MrPrompt\ShipmentCommon\Base\Authorization;
+use MrPrompt\ShipmentCommon\Base\ConsumerUnity;
 
 /**
  *
@@ -262,7 +262,7 @@ trait Mock
             ->byDefault();
 
         $purchaser
-            ->shouldReceive('getPurchaserFantasyName')
+            ->shouldReceive('getFantasyName')
             ->andReturn('Fantasy name')
             ->byDefault();
 
@@ -272,17 +272,17 @@ trait Mock
             ->byDefault();
 
         $purchaser
-            ->shouldReceive('getPurchaserSocialReason')
+            ->shouldReceive('getSocialReason')
             ->andReturn('Social Reason')
             ->byDefault();
 
         $purchaser
-            ->shouldReceive('getPurchaserDocument')
+            ->shouldReceive('getDocument')
             ->andReturn($this->documentMock())
             ->byDefault();
 
         $purchaser
-            ->shouldReceive('getPurchaserStateRegistration')
+            ->shouldReceive('getStateRegistration')
             ->andReturn(1)
             ->byDefault();
 

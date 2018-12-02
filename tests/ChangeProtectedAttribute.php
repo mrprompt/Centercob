@@ -1,8 +1,5 @@
 <?php
-/**
- * @license public
- */
-namespace MrPrompt\Centercob\Common\Util;
+namespace MrPrompt\Centercob\Tests;
 
 use ReflectionProperty;
 
